@@ -28,15 +28,20 @@ def ChercheChemin(dep,arr,pas = [], chemin = []):
             isPosible = ChercheChemin(suivant,arr,pas,chemin)
 
         else :
-             if isFirst:
-                 # reformat
-                 i = 0
-                 while i < len(chemin) -1 :
-                     print("arc ( "+ str(chemin[i]) +" , " + str(chemin[i+1]) + " )")
-                     i+=1
+
 
              break
 
+    if isFirst:
+        # reformat
+        i = 0
+
+        while i < len(chemin) - 1:
+            print("arc ( " + str(chemin[i]) + " , " + str(chemin[i + 1]) + " )")
+            i += 1
+
+        if len(chemin) == 1:
+            print("arc ( " + str(dep) + " , " + str(arr) + " )")
 
     return isPosible
 
@@ -77,4 +82,4 @@ for u in range(0, NbVertices):
 # print(suiv)
 # print(prec)
 
-print(ChercheChemin(1,13))
+print(ChercheChemin(4,14))
