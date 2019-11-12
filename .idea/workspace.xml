@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="970d5826-ecca-4415-9697-766a76b7bab1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP1.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP1.py" afterDir="false" />
     </list>
@@ -96,8 +95,17 @@
       <updated>1573024991604</updated>
       <workItem from="1573024994456" duration="6550000" />
       <workItem from="1573322030098" duration="1834000" />
-      <workItem from="1573326974950" duration="288000" />
+      <workItem from="1573326974950" duration="2282000" />
+      <workItem from="1573384956991" duration="2938000" />
     </task>
+    <task id="LOCAL-00001" summary="Correction des bugs de s to s">
+      <created>1573327380435</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573327380435</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,8 +124,12 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Correction des bugs de s to s" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction des bugs de s to s" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/THdG$TP1.coverage" NAME="TP1 Coverage Results" MODIFIED="1573327293093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/THdG$TP1.coverage" NAME="TP1 Coverage Results" MODIFIED="1573406131889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ThdGTP1$TP1.coverage" NAME="TP1 Coverage Results" MODIFIED="1573031576408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

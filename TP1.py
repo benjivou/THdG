@@ -2,7 +2,7 @@
 # pas : sommets déja traversés
 def ChercheChemin(dep,arr,pas = [], chemin = []):
 
-    isPosible = False
+
     suiv_prepa = []
     isFirst = False
 
@@ -20,6 +20,7 @@ def ChercheChemin(dep,arr,pas = [], chemin = []):
             pas.append(som)
 
     isPosible = (dep == arr)
+
     # suiv
     for suivant in suiv_prepa:
         # check si c'est déja passé par là
@@ -28,8 +29,6 @@ def ChercheChemin(dep,arr,pas = [], chemin = []):
             isPosible = ChercheChemin(suivant,arr,pas,chemin)
 
         else :
-
-
              break
 
     if isFirst:
@@ -40,12 +39,19 @@ def ChercheChemin(dep,arr,pas = [], chemin = []):
             print("arc ( " + str(chemin[i]) + " , " + str(chemin[i + 1]) + " )")
             i += 1
 
+        # pour les arcs de sommet s vers s
         if len(chemin) == 1:
             print("arc ( " + str(dep) + " , " + str(arr) + " )")
 
     return isPosible
 
+# cette application retourne le chemin le plus cours
+def Djikstra(dep,arr,listPoids=[], listChemin=[]):
 
+    # sauvegarde le chemin
+    listChemin.append(dep)
+
+    return listChemin;
 
 file_graph = 'graph_TP1.txt'
 # Read the doc
@@ -55,13 +61,16 @@ all_arcs = TheGraph.readlines()
 # Remove tab
 Origin = []
 Destination = []
+Valeur = []
 
 for arc in all_arcs:
     this_arc = arc.split("\t")
     orig = int(this_arc[0])
     dest = int(this_arc[1].strip("\n"))
+    valeur = int(this_arc[2].strip("\n"))
     Origin.append(orig)
     Destination.append(dest)
+    Valeur.append(valeur)
     # Create previous / after
 
 NBArcs = len(Origin)
@@ -81,5 +90,6 @@ for u in range(0, NbVertices):
 # print('NBVertics : ' + str(NbVertices))
 # print(suiv)
 # print(prec)
+
 
 print(ChercheChemin(4,14))
