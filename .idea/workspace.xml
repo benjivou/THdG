@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="970d5826-ecca-4415-9697-766a76b7bab1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TP Djikstra/TD.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP Djikstra/TD.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP Djikstra/TD.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +120,7 @@
       <workItem from="1573322030098" duration="1834000" />
       <workItem from="1573326974950" duration="2282000" />
       <workItem from="1573384956991" duration="2938000" />
-      <workItem from="1574148151009" duration="574000" />
+      <workItem from="1574148151009" duration="1723000" />
     </task>
     <task id="LOCAL-00001" summary="Correction des bugs de s to s">
       <created>1573327380435</created>
@@ -155,6 +155,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/THdG$TP1.coverage" NAME="TP1 Coverage Results" MODIFIED="1574148555652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ThdGTP1$TP1.coverage" NAME="TP1 Coverage Results" MODIFIED="1573031576408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/THdG$TD.coverage" NAME="TD Coverage Results" MODIFIED="1574148728537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TP Djikstra" />
+    <SUITE FILE_PATH="coverage/THdG$TD.coverage" NAME="TD Coverage Results" MODIFIED="1574149883511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TP Djikstra" />
   </component>
 </project>
