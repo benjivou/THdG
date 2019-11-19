@@ -45,13 +45,6 @@ def ChercheChemin(dep,arr,pas = [], chemin = []):
 
     return isPosible
 
-# cette application retourne le chemin le plus cours
-def Djikstra(dep,arr,listPoids=[], listChemin=[]):
-
-    # sauvegarde le chemin
-    listChemin.append(dep)
-
-    return listChemin;
 
 file_graph = 'graph_TP1.txt'
 # Read the doc
