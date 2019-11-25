@@ -2,12 +2,14 @@ import os
 import math
 import time
 from tkinter import *
-
-
+time_start = time.perf_counter()
 
 
 file_arc = 'Arcs.csv'
 file_noeuds = 'Noeuds.csv'
+
+infinity = 99999999
+infinityB = infinity +1
 
 sommet_depart = 23160
 sommet_destination = 27195
@@ -70,6 +72,70 @@ for u in range(0, NbVertices):
     suiv[orig].append(dest)
     prec[dest].append(orig)
 
+def Djikstra(startpos,finpos):
+
+
+    Poids= [infinity] *NbVertices  # Sauvegarde le poids le plus petit pour rejoindre les points
+    PrecBlockage = [-1] *NbVertices      # Sauvegarde La precedence du plus court chemin
+
+
+    # pos de départ
+    Poids[startpos] = 0
+    PrecBlockage[startpos] = startpos
+    # Debut du code
+    while True :
+        # recupération de l'index du min
+        debutLongueur = min(Poids)
+
+
+        if (debutLongueur == infinity): break; # vérifie si le problème a une solution
+
+        debut = Poids.index(debutLongueur)
+        TraceCercle(debut, 'yellow', rayon_noeud)
+
+        # etat final bon
+        if debut == finpos:
+            break;
+
+        # On efface le poids
+        Poids[debut] = infinityB
+
+        # comparer les valeurs des arcs
+        # Trouver les nouveaux arcs
+
+        if   debut not in Origin :
+            continue
+
+        posPremArc = Origin.index(debut)
+        # Nombre des valeurs origines
+
+        count = 0
+        while Origin[posPremArc + count] == debut:
+            dst = Destination[posPremArc+count]
+            long = Longueur[posPremArc+count]
+            # modifier les sommets : sauvegarde des nouvelles distances
+            nvlDistance = debutLongueur + long
+
+            if Poids[dst] != infinityB and Poids[dst] > nvlDistance:
+                Poids[dst] = nvlDistance    # sauvegarde le point le plus petit
+                PrecBlockage[dst] = debut   # sauvegarde la provenance
+
+            count += 1
+
+    #     Recupére le plus court chemin
+
+
+    if(PrecBlockage[finpos] != -1):
+        currentPos = finpos
+
+        while currentPos != startpos:
+            TraceCercle(currentPos, 'purple', 2* rayon_noeud)
+            currentPos = PrecBlockage[currentPos]
+
+        TraceCercle(currentPos, 'purple', 2*rayon_noeud)
+
+    return
+
 def TraceCercle(j,couleur,rayon):
     x=(Longitude[j]-minLong)*ratioWidth + border
     y=(Latitudes[j]-minLat)*ratioHeight+ border
@@ -99,10 +165,44 @@ can.pack(padx=5,pady=5)
 #  cercles
 rayon_noeud = 1  # rayon pour dessin des points
 rayon_od = 5     # rayon pour origine et destination
+
 for i in range(0,NbNoeuds):
     TraceCercle(i,coul_noeud,rayon_noeud)
 TraceCercle(sommet_depart,'green',rayon_od)
 TraceCercle(sommet_destination,'red',rayon_od)
 
+def Arc (i,j):
+    # chercher la position de l'origine dans les arcs
+    posDeb = Origin.index(i)
+
+    # compter les positions
+    count = 0
+    while Origin[posDeb+count] == i :
+        count+=1
+
+    # On recherche l'Arc i,j
+    iterator = 0;
+    while Destination[posDeb + iterator] != j and  iterator<count :
+        iterator+=1
+
+    res = -1
+    # si l'arc existe
+    if iterator < count:
+        res = posDeb+iterator + 1
+
+    return res
+
+
+# determine le temps de départ
+
+
+
+
+
+
+Djikstra(sommet_depart,sommet_destination)
+time_stop = time.perf_counter()
+print(" le programme a été exéxté en (secondes) ", time_stop-time_start)
 can.mainloop()
-print(NBArcs)
+
+
