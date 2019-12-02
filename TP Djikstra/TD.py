@@ -59,18 +59,23 @@ for arc in all_arcs:
     Longueur.append(valeur)
     # Create previous / after
 
-NBArcs = len(Origin)
 NbVertices = max(max(Origin), max(Destination)) + 1
 
-prec = [[] for i in range(NbVertices)]
-suiv = [[] for i in range(NbVertices)]
+suiv = [[] ]*NbVertices
+longSuiv = [[] ]*NbVertices
 
-# Travel in the origin
-for u in range(0, NbVertices):
-    orig = Origin[u]
-    dest = Destination[u]
+NBArcs = len(Origin)
+
+for arc in all_arcs:
+    this_arc = arc.split("\t")
+    orig = int(this_arc[0])
+    dest = int(this_arc[1].strip("\n"))
+    valeur = int(this_arc[2].strip("\n"))
     suiv[orig].append(dest)
-    prec[dest].append(orig)
+    longSuiv[orig].append(valeur)
+
+
+
 
 def Djikstra(startpos,finpos):
 
@@ -136,6 +141,134 @@ def Djikstra(startpos,finpos):
 
     return
 
+def Dji2(starpos,endpos):
+    #  Info par Arcs
+    Origin_dec = Origin
+    Destination_dec = Destination
+    Longueur_dec = Longueur
+
+    #  Info par Sommets
+    Sommets_act = []
+    Preced_act = []
+    for i  in range(0,NbVertices):
+        Sommets_act.append(i)
+        Preced_act.append(i)
+    print(Sommets_act[1])
+    Poids_act = [infinity]*NbVertices
+
+
+    # resultat final
+    Sommets_fin=[]
+    Poids_fin=[]
+    Preced_fin=[]
+
+    # Step 1 : initialisation
+    Poids_act[starpos] = 0
+
+    # Step 2 : Boucle
+
+    while True :
+         # Step 2.1 :Recupération du sommet et de son plus court chemin
+        poids_depart = min(Poids_act)
+        pos_dans_index = Poids_act.index(poids_depart)
+
+        sommet_nom_depart = Sommets_act[pos_dans_index]
+        precedence_depart = Preced_act[pos_dans_index]
+
+        # Step 2.2 :Test des cas terminaux
+        #  On a trouvé la fin
+        if  sommet_nom_depart == endpos :
+            Poids_fin.append(poids_depart)
+            Sommets_fin.append(sommet_nom_depart)
+            Preced_fin.append(precedence_depart)
+            break;
+
+        # Impossible de rejoindre le sommet
+        if poids_depart == infinity :
+            print("Chemin introuvable")
+            return
+
+         # Step 2.3 :Tracage du sommet
+        TraceCercle(sommet_nom_depart, 'yellow', rayon_noeud)
+
+        # Step 2.4 : Mise à jour des nouveaux sommets destinations
+        if  sommet_nom_depart in Origin_dec :
+
+             posPremArc = Origin_dec.index(sommet_nom_depart)
+
+             while Origin[posPremArc ] == sommet_nom_depart:
+                 dst = Destination_dec[posPremArc]
+                 long = Longueur_dec[posPremArc]
+
+                 #  supression du sommet
+                 del Origin_dec[posPremArc]
+                 del Longueur_dec[posPremArc]
+                 del Destination_dec[posPremArc]
+
+                 # modifier les sommets : sauvegarde des nouvelles distances
+                 nvlDistance = poids_depart + long
+
+                 if  dst in Sommets_act and Poids_act[Sommets_act.index(dst)] > nvlDistance:
+                     Poids_act[Sommets_act.index(dst)] = nvlDistance  # sauvegarde le point le plus petit
+                     Preced_act[Sommets_act.index(dst)] = sommet_nom_depart  # sauvegarde la provenance
+
+
+
+        # On met à jour les listes act et fin
+        del Poids_act[pos_dans_index]
+        del Sommets_act[pos_dans_index]
+        del Preced_act[pos_dans_index]
+
+        Poids_fin.append(poids_depart)
+        Sommets_fin.append(sommet_nom_depart)
+        Preced_fin.append(precedence_depart)
+
+    # on passe à la phase d'écriture dans le graphe des sommets du plus cours chemin
+    current_precedence = Preced_fin[len(Preced_fin)-1]
+    while current_precedence != starpos:
+        TraceCercle(current_precedence, 'purple', 2 * rayon_noeud)
+        current_precedence = Preced_fin[Sommets_fin.index(current_precedence)]
+
+    TraceCercle(endpos, 'purple', 2 * rayon_noeud)
+    print("chelin trouvé")
+    return
+
+def DjikstraV2(startpos,endpos):
+    fini = False
+
+    # Liste
+
+    # Sauvegarde des potentiels
+    Potentiels = [infinity] * NbVertices
+    Marque = [False] * NbVertices
+    SommetsPrecedents = [-1] * NbVertices
+    Candidats = []
+
+    # Initialisation
+    Marque[startpos] = True
+    Potentiels[startpos] = 0
+    for k in suiv[startpos] :
+        ind_k = suiv[startpos].index(k)
+        Potentiels[k]=longSuiv[startpos][ind_k]
+        Candidats.append(k)
+
+    while fini == False:
+        # Récupération des infos du sommet min
+        potmin = infinity
+        for j in Candidats:
+            if not Marque[j] and Potentiels[j]< potmin:
+                potmin = Potentiels[j]
+                ce_sommet = j
+
+        Marque[ce_sommet] = True
+
+        # Marquage
+        TraceCercle(ce_sommet,"yellow", rayon_noeud)
+
+        if ce_sommet == endpos :
+            fini = True
+
+
 def TraceCercle(j,couleur,rayon):
     x=(Longitude[j]-minLong)*ratioWidth + border
     y=(Latitudes[j]-minLat)*ratioHeight+ border
@@ -200,7 +333,7 @@ def Arc (i,j):
 
 
 
-Djikstra(sommet_depart,sommet_destination)
+DjikstraV2(sommet_depart,sommet_destination)
 time_stop = time.perf_counter()
 print(" le programme a été exéxté en (secondes) ", time_stop-time_start)
 can.mainloop()
