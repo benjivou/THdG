@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="970d5826-ecca-4415-9697-766a76b7bab1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TP Djikstra/A.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP Djikstra/TD.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP Djikstra/TD.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +42,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/TP Djikstra" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Document\gitKraken\THdG\TP Djikstra" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -54,7 +59,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dijstrav2">
+  <component name="RunManager" selected="Python.A">
+    <configuration name="A" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ThdGTP1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TP Djikstra" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TP Djikstra/A.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="TD" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ThdGTP1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TP1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="dijstrav2 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ThdGTP1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -85,12 +112,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="E:/Telechargement" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TP1.py" />
+      <option name="SCRIPT_NAME" value="E:/Telechargement/dijstrav2 (1).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -99,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="dijstrav2 (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ThdGTP1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,12 +134,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TP Djikstra" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TP Djikstra/dijstrav2 (1).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,10 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.A" />
         <item itemvalue="Python.dijstrav2" />
+        <item itemvalue="Python.dijstrav2 (2)" />
+        <item itemvalue="Python.dijstrav2 (1)" />
         <item itemvalue="Python.TD" />
-        <item itemvalue="Python.Test" />
-        <item itemvalue="Python.TP1" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +200,9 @@
       <workItem from="1574714205942" duration="5734000" />
       <workItem from="1575285756163" duration="8558000" />
       <workItem from="1575300797508" duration="5983000" />
+      <workItem from="1575365846369" duration="6802000" />
+      <workItem from="1575757082965" duration="10850000" />
+      <workItem from="1575802906458" duration="241000" />
     </task>
     <task id="LOCAL-00001" summary="Correction des bugs de s to s">
       <created>1573327380435</created>
@@ -204,10 +235,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Correction des bugs de s to s" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/THdG$A.coverage" NAME="A Coverage Results" MODIFIED="1575803342038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TP Djikstra" />
+    <SUITE FILE_PATH="coverage/THdG$dijstrav2__2_.coverage" NAME="dijstrav2 (2) Coverage Results" MODIFIED="1575758727824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TP Djikstra" />
     <SUITE FILE_PATH="coverage/THdG$TP1.coverage" NAME="TP1 Coverage Results" MODIFIED="1574148555652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ThdGTP1$TP1.coverage" NAME="TP1 Coverage Results" MODIFIED="1573031576408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/THdG$Test.coverage" NAME="Test Coverage Results" MODIFIED="1574152157532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/THdG$dijstrav2.coverage" NAME="dijstrav2 Coverage Results" MODIFIED="1575313283435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TP Djikstra" />
+    <SUITE FILE_PATH="coverage/THdG$dijstrav2__1_.coverage" NAME="dijstrav2 (1) Coverage Results" MODIFIED="1575758723386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/Telechargement" />
+    <SUITE FILE_PATH="coverage/THdG$dijstrav2.coverage" NAME="dijstrav2 Coverage Results" MODIFIED="1575766523238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TP Djikstra" />
     <SUITE FILE_PATH="coverage/THdG$TD.coverage" NAME="TD Coverage Results" MODIFIED="1575306570245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TP Djikstra" />
   </component>
 </project>
